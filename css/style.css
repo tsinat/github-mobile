@@ -1,0 +1,69 @@
+.profile *, .followers *, .directory * {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.logo{
+    margin-left: 50%;
+    margin-right: 0;
+    text-align: center;
+}
+.profile {
+    margin-top: 60px !important;
+    padding:0;
+}
+
+.profile img {
+    width: 110px;
+    height: 110px;
+    float: left;
+    clear: left;
+    border-radius: 2px;
+    margin-right: 10px !important;
+
+}
+.profile p {
+    margin-left: 20px !important;
+    padding-left: 20px !important;
+    padding: 3px !important;
+
+}
+.container{
+    margin-left: 20px !important;
+}
+.followers {
+    margin-top: 20px !important;
+    height: 70px;
+    background-color: #DCDCDC;
+    border: 2px silver solid;
+    text-align: center;
+}
+@media (min-width:500px){
+    .followers {
+    margin-top: 20px !important;
+    height: 70px;
+    background-color: #DCDCDC;
+    border: 2px silver solid;
+    text-align: center;
+}
+}
+
+.directory ul {
+    width: 100% !important;
+    margin-right: 0 ! important;
+    margin-left: 0 !important;
+    padding: 20px !important;
+
+
+}
+.directory ul li {
+    padding: 10px !important;
+    list-style: none !important;
+    border: 1px solid silver;
+
+}
+.directory ul li i.fa-star-o{
+    float: right;
+}
+.bottom {
+    border: 1px solid silver !important;
+}
