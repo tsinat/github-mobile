@@ -1,3 +1,8 @@
+.navbar-toggle{
+    display: hidden !important;
+}
+
+
 .profile *, .followers *, .directory * {
     padding: 0 !important;
     margin: 0 !important;
@@ -35,7 +40,7 @@
     height: 70px;
     background-color: #DCDCDC;
     border: 2px silver solid;
-    text-align: center;
+    text-align: center !important;
 }
 @media (min-width:500px){
     .followers {
