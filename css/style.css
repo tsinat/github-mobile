@@ -2,6 +2,12 @@
     display: hidden !important;
 }
 
+#tabs {
+    margin-top: 60px;
+}
+#tabs-1 .profile{
+    width: 50% !important;
+}
 
 .profile *, .followers *, .directory * {
     padding: 0 !important;

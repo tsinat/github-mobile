@@ -1,4 +1,5 @@
 (function($){
+  $( "#tabs" ).tabs();
 
     $.getJSON("https://api.github.com/users/tsinat", function(data){
           //  console.log(data);
