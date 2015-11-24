@@ -17,7 +17,7 @@
 </head>
 <body>
     <!--NAVBAR -->
- <div class= "navbar navbar-default navbar-fixed-top" role="navigation">
+<div class= "navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
            <button type="button " class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -38,89 +38,122 @@
          </ul>
      </div>
    </div>
- </div>
+</div>
 <!-- END NAVBAR -->
-<!--Tab panel -->
-<div id="tabs">
-  <ul>
-    <li><a href="#tabs-1">About</a></li>
-    <li><a href="#tabs-2">repositories</a></li>
+
+<!--div class="container"-->
+  <h2>Dynamic Tabs</h2>
+  <ul class="nav nav-tabs">
+    <li class="active help"><a data-toggle="tab" href="#home"><strong>About</strong></a></li>
+    <li class = "help"><a data-toggle="tab" href="#menu1"><strong>Repositories</strong></a></li>
   </ul>
-  <div id="tabs-1">
+
+<div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+
+            <script id="Handlebars-Template" type="text/x-handlebars-template">
+                     <div class="profile">
+                       <div class="container">
+                         <div class="row">
+                           <div class=" col-md-12 col-sx-12">
+                             <img  src={{avatar_url}}>
+                             <h4><strong>{{name}}</strong></h4>
+                             <p>{{login}}</p>
+                             <p>{{company}}</p>
+                             <p><i class="fa fa-map-marker"></i>  {{location}}</p>
+                           </div>
+                         </div>
+                      </div>
+                    </div>
+                    <div class="followers">
+                      <!--div class="container" -->
+                        <div class="row">
+                       <div class="col-md-4 col-sx-4 follow">
+                          <h3><strong>{{followers}}</strong></h3>
+                              <p>Followers</p>
+                       </div>
+                       <div class="col-md-4 col-sx-4 follow">
+                              <h3><strong>0</strong></h3>
+                              <p>Stared</p>
+                       </div>
+                       <div class="col-md-4 col-sx-4 follow">
+                              <h3><strong>{{following}}</strong></h3>
+                              <p>Following</p>
+                       </div>
+                        </div>
+                      <!--/div -->
+                </div>
+            </script>
+            <div id="profile"></div>
+            <script id="Repo-Template" type="text/x-handlebars-template">
+               <div class="directory">
+                  <!--div class="container" -->
+                      <div class="row">
+                          <div class="col-md-12 col-sx-12">
+                             <ul>
+                                 <li>Popular repositories</li>
+                                 <li><i class="fa fa-book"></i><a href={{Array.1.html_url}}> {{Array.1.full_name}}  <i class="fa fa-star-o"></i><span>{{Array.1.stargazers_count}}</span></a></li>
+                                 <li><i class="fa fa-code-fork"></i><a href={{Array.0.html_url}} >   {{Array.0.full_name}}  <i class="fa fa-star-o"></i><span>{{Array.0.stargazers_count}}</span></a></li>
+                                 <li><i class="fa fa-book"></i><a href={{Array.2.html_url}}>  {{Array.2.full_name}}  <i class="fa fa-star-o"></i><span>{{Array.2.stargazers_count}}</span></a></li>
+                                 <li><i class="fa fa-book"></i><a href={{Array.3.html_url}} >  {{Array.3.full_name}}  <i class="fa fa-star-o"></i><span>{{Array.3.stargazers_count}}</span></a></li>
+                                 <li><i class="fa fa-book"></i><a href={{Array.4.html_url}}>  {{Array.4.full_name}}  <i class="fa fa-star-o"></i><span>{{Array.4.stargazers_count}}</span></a></li>
+                                 <li><i class="fa fa-book"></i><a href={{Array.5.html_url}} >  {{Array.5.full_name}}   <i class="fa fa-star-o"></i><span>{{Array.5.stargazers_count}}</span></a></li>
+                             </ul>
+                             <ul>
+                                 <li>Repositories contributed to</li>
+                                 <li><i class="fa fa-book"></i><a href="#">  anbestephen/colaboration-tool  <i class="fa fa-star-o"></i></a></li>
+                             </ul>
+                          </div>
+                     </div>
+                  <!--/div -->
+                </div>
+             </script>
+             <div id="repo"></div>
+                <div class="bottom">
+                   <div class="container">
+                      <div class="row">
+                          <div class="col-md-12 col-sx-12">
+                              <i class="fa fa-github fa-3x"></i>
+                          </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+    <div id="menu1" class="tab-pane fade">
+      <script id="Second-Template" type="text/x-handlebars-template">
+        <div class="second-directory">
+             <!--div class="container" -->
+                 <div class="row">
+                     <div class="col-md-12 col-sx-12">
+                         <ul>
+                             <li><i class="fa fa-book"></i><a href={{Array.1.html_url}}> {{Array.1.full_name}}  <i class="fa fa-star-o"></i></a></li>
+                             <li><i class="fa fa-code-fork"></i><a href={{Array.0.html_url}} >   {{Array.0.full_name}}  <i class="fa fa-star-o"></i></a></li>
+                             <li><i class="fa fa-book"></i><a href={{Array.2.html_url}}>  {{Array.2.full_name}}  <i class="fa fa-star-o"></i></a></li>
+                             <li><i class="fa fa-book"></i><a href={{Array.3.html_url}} >  {{Array.3.full_name}}  <i class="fa fa-star-o"></i></a></li>
+                             <li><i class="fa fa-book"></i><a href={{Array.4.html_url}}>  {{Array.4.full_name}}  <i class="fa fa-star-o"></i></a></li>
+                             <li><i class="fa fa-book"></i><a href={{Array.5.html_url}} >  {{Array.5.full_name}}   <i class="fa fa-star-o"></a></i></li>
+                             <li><i class="fa fa-book"></i><a href="#">  anbestephen/colaboration-tool  <i class="fa fa-star-o"></i></a></li>
+                         </ul>
+                     </div>
+                </div>
+             <!--/div -->
+         </div>
+      </script>
+
+
+
+<div id="second">
+
+</div>
+</div>
+
+
+
 
 
 <!--End Tab panel -->
-<script id="Handlebars-Template" type="text/x-handlebars-template">
-  <div class="profile">
-    <div class="container">
-      <div class="row">
-            <div class=" col-md-12 col-sx-12">
-                <img  src={{avatar_url}}>
-                <h4><strong>{{name}}</strong></h4>
-                <p>{{login}}</p>
-                <p>{{company}}</p>
-                <p><i class="fa fa-map-marker"></i>  {{location}}</p>
-            </div>
-    </div>
-  </div>
-</div>
-<div class="followers">
-  <div class="container">
-    <div class="row">
-         <div class="col-md-4 col-sx-4">
-             <h3><strong>{{followers}}</strong></h3>
-             <p>Followers</p>
-         </div>
-         <div class="col-md-4 col-sx-4">
-             <h3><strong>0</strong></h3>
-             <p>Stared</p>
-         </div>
-         <div class="col-md-4 col-sx-4">
-             <h3><strong>{{following}}</strong></h3>
-             <p>Following</p>
-         </div>
-    </div>
-  </div>
-</div>
-</script>
-<div id="profile"></div>
-<script id="Repo-Template" type="text/x-handlebars-template">
-<div class="directory">
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 col-sx-12">
-             <ul>
-                 <li>Popular repositories</li>
-                 <li><i class="fa fa-book"></i><a href="#">  tsinat/first-site  <i class="fa fa-star-o"></i></a></li>
-                 <li><i class="fa fa-code-fork"></i><a href="#">  tsinat/colaboration-tools  <i class="fa fa-star-o"></i></a></li>
-                 <li><i class="fa fa-book"></i><a href="#">  tsinat/habesha-restaurant  <i class="fa fa-star-o"></i></a></li>
-                 <li><i class="fa fa-book"></i><a href="#">  tsinat/jqueryImageSlider  <i class="fa fa-star-o"></i></a></li>
-                 <li><i class="fa fa-book"></i><a href="#">  tsinat/Single_Page_Application  <i class="fa fa-star-o"></a></i></li>
-             </ul>
-             <ul>
-                 <li>Repositories contributed to</li>
-                 <li><i class="fa fa-book"></i><a href="#">  anbestephen/colaboration-tool  <i class="fa fa-star-o"></i></a></li>
-             </ul>
-         </div>
-    </div>
-</div>
-</div>
-</script>
-<div id="repo"></div>
-<div class="bottom">
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 col-sx-12">
-            <i class="fa fa-github fa-3x"></i>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-  <div id="tabs-2">
-    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
-  </div>
-  </div>
+
 <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

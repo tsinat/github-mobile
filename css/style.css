@@ -1,12 +1,6 @@
-.navbar-toggle{
-    display: hidden !important;
-}
-
-#tabs {
-    margin-top: 60px;
-}
-#tabs-1 .profile{
-    width: 50% !important;
+.help {
+    width:50% !important;
+    text-align: center;
 }
 
 .profile *, .followers *, .directory * {
@@ -14,12 +8,12 @@
     margin: 0 !important;
 }
 .logo{
-    margin-left: 50%;
     margin-right: 0;
-    text-align: center;
+    margin-left: 40px;
+    text-align: center !important;
 }
 .profile {
-    margin-top: 60px !important;
+    margin-top: 10px !important;
     padding:0;
 }
 
@@ -41,19 +35,26 @@
 .container{
     margin-left: 20px !important;
 }
+.follow{
+    width:33%;
+    float:left;
+}
 .followers {
     margin-top: 20px !important;
     height: 70px;
-    background-color: #DCDCDC;
-    border: 2px silver solid;
+    background-color: #fafafa;
+    border: 1px silver solid;
     text-align: center !important;
+}
+.followers div{
+    padding-top: 5px !important;
 }
 @media (min-width:500px){
     .followers {
     margin-top: 20px !important;
     height: 70px;
-    background-color: #DCDCDC;
-    border: 2px silver solid;
+    background-color: #fafafa;
+    border: 1px silver solid;
     text-align: center;
 }
 }
@@ -69,12 +70,40 @@
 .directory ul li {
     padding: 10px !important;
     list-style: none !important;
-    border: 1px solid silver;
+    border: 1px  solid silver;
 
 }
+
 .directory ul li i.fa-star-o{
+    float: right;
+}
+.directory ul li span {
+    text-align: right;
     float: right;
 }
 .bottom {
     border: 1px solid silver !important;
+}
+
+.second-directory ul {
+    width: 100% !important;
+    margin-right: 0 ! important;
+    margin-left: 0 !important;
+    padding: 20px !important;
+
+
+}
+.second-directory ul li {
+    padding: 10px !important;
+    list-style: none !important;
+    border: 1px  solid silver;
+
+}
+
+.second-directory ul li i.fa-star-o{
+    float: right;
+}
+.second-directory ul li span {
+    text-align: right;
+    float: right;
 }

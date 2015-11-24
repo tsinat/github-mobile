@@ -2,12 +2,12 @@
   $( "#tabs" ).tabs();
 
     $.getJSON("https://api.github.com/users/tsinat", function(data){
-          //  console.log(data);
+          //console.log(data);
             procesData(data);
             last(data);
+            second(data);
         });
     function procesData(data){
-        //console.log(data);
         var source = $("#Handlebars-Template").html();
         var template = Handlebars.compile(source);
          var result = template(data);
@@ -24,9 +24,23 @@
         console.log(data);
         var source = $("#Repo-Template").html();
         var template = Handlebars.compile(source);
-         var result = template(data);
+        var result = template({Array: data});
 
-      $("#repo").html(result);
+       $("#repo").html(result);
     }
+      function second(value){
+        var repo = value;
+        $.getJSON(repo.repos_url, function(data){
+           secondRepo(data);
+         });
+    }
+    function secondRepo(data){
+        console.log(data);
+        var source = $("#Second-Template").html();
+        var template = Handlebars.compile(source);
+        var result = template({Array: data});
+
+       $("#second").html(result);
+   }
 
 }(jQuery));
